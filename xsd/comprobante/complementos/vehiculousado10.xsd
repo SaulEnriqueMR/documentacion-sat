@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:vehiculousado="http://www.sat.gob.mx/vehiculousado"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.sat.gob.mx/vehiculousado" elementFormDefault="qualified"
-	attributeFormDefault="unqualified">
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/vehiculousado" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="VehiculoUsado">
 		<xs:annotation>
 			<xs:documentation>Complemento opcional que permite incorporar información a los
@@ -13,8 +11,7 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="InformacionAduanera" type="vehiculousado:t_InformacionAduanera"
-					minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="InformacionAduanera" type="vehiculousado:t_InformacionAduanera" minOccurs="0" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>Nodo opcional para introducir la información aduanera
 							aplicable cuando se trate de ventas de primera mano de mercancías

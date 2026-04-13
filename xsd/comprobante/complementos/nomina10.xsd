@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:nomina="http://www.sat.gob.mx/nomina" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/nomina" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:nomina="http://www.sat.gob.mx/nomina"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/nomina" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="Nomina">
 		<xs:annotation>
 			<xs:documentation>Complemento al Comprobante Fiscal Digital a través de Internet (CFDI) para el manejo de datos de Nómina.</xs:documentation>

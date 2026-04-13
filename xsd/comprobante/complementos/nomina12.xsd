@@ -3,15 +3,10 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
 	xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
-	xmlns:catNomina="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina"
-	targetNamespace="http://www.sat.gob.mx/nomina12" elementFormDefault="qualified"
-	attributeFormDefault="unqualified">
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd" />
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd" />
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina/catNomina.xsd" />
+	xmlns:catNomina="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina" targetNamespace="http://www.sat.gob.mx/nomina12" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd" />
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd" />
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina/catNomina.xsd" />
 	<xs:element name="Nomina">
 		<xs:annotation>
 			<xs:documentation>Complemento para incorporar al Comprobante Fiscal Digital por Internet
@@ -40,8 +35,7 @@
 										paraestatales y paramunicipales</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
-									<xs:attribute name="OrigenRecurso"
-										type="catNomina:c_OrigenRecurso" use="required">
+									<xs:attribute name="OrigenRecurso" type="catNomina:c_OrigenRecurso" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para identificar el
 												origen del recurso utilizado para el pago de nómina
@@ -50,8 +44,7 @@
 												dependencias.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="MontoRecursoPropio"
-										type="tdCFDI:t_ImporteMXN" use="optional">
+									<xs:attribute name="MontoRecursoPropio" type="tdCFDI:t_ImporteMXN" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo condicional para expresar el
 												monto del recurso pagado con cargo a sus
@@ -110,8 +103,7 @@
 										personas que los subcontrataron.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
-									<xs:attribute name="RfcLabora" type="tdCFDI:t_RFC"
-										use="required">
+									<xs:attribute name="RfcLabora" type="tdCFDI:t_RFC" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar el
 												RFC de la persona que subcontrata.</xs:documentation>
@@ -157,8 +149,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="FechaInicioRelLaboral" type="tdCFDI:t_Fecha"
-							use="optional">
+						<xs:attribute name="FechaInicioRelLaboral" type="tdCFDI:t_Fecha" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar la fecha de
 									inicio de la relación laboral entre el empleador y el empleado.
@@ -179,13 +170,11 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
 									<xs:whiteSpace value="collapse" />
-									<xs:pattern
-										value="P(([1-9][0-9]{0,3})|0)W|P([1-9][0-9]?Y)?(([1-9]|1[012])M)?(0|[1-9]|[12][0-9]|3[01])D" />
+									<xs:pattern value="P(([1-9][0-9]{0,3})|0)W|P([1-9][0-9]?Y)?(([1-9]|1[012])M)?(0|[1-9]|[12][0-9]|3[01])D" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="TipoContrato" type="catNomina:c_TipoContrato"
-							use="required">
+						<xs:attribute name="TipoContrato" type="catNomina:c_TipoContrato" use="required">
 							<xs:annotation>
 								<xs:documentation>Atributo requerido para expresar el tipo de
 									contrato que tiene el trabajador.</xs:documentation>
@@ -205,8 +194,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="TipoJornada" type="catNomina:c_TipoJornada"
-							use="optional">
+						<xs:attribute name="TipoJornada" type="catNomina:c_TipoJornada" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el tipo de
 									jornada que cubre el trabajador. Se debe ingresar cuando se esté
@@ -214,8 +202,7 @@
 									fiscales.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TipoRegimen" type="catNomina:c_TipoRegimen"
-							use="required">
+						<xs:attribute name="TipoRegimen" type="catNomina:c_TipoRegimen" use="required">
 							<xs:annotation>
 								<xs:documentation>Atributo requerido para la expresión de la clave
 									del régimen por el cual se tiene contratado al trabajador.</xs:documentation>
@@ -263,8 +250,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="RiesgoPuesto" type="catNomina:c_RiesgoPuesto"
-							use="optional">
+						<xs:attribute name="RiesgoPuesto" type="catNomina:c_RiesgoPuesto" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo opcional para expresar la clave conforme
 									a la Clase en que deben inscribirse los patrones, de acuerdo con
@@ -277,8 +263,7 @@
 									distintas a las fiscales.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="PeriodicidadPago" type="catNomina:c_PeriodicidadPago"
-							use="required">
+						<xs:attribute name="PeriodicidadPago" type="catNomina:c_PeriodicidadPago" use="required">
 							<xs:annotation>
 								<xs:documentation>Atributo requerido para la forma en que se
 									establece el pago del salario.</xs:documentation>
@@ -291,8 +276,7 @@
 									nómina.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="CuentaBancaria" type="tdCFDI:t_CuentaBancaria"
-							use="optional">
+						<xs:attribute name="CuentaBancaria" type="tdCFDI:t_CuentaBancaria" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para la expresión de la
 									cuenta bancaria a 11 posiciones o número de teléfono celular a
@@ -301,8 +285,7 @@
 									monedero electrónico, donde se realiza el depósito de nómina.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="SalarioBaseCotApor" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="SalarioBaseCotApor" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo opcional para expresar la retribución
 									otorgada al trabajador, que se integra por los pagos hechos en
@@ -318,8 +301,7 @@
 									otras disposiciones distintas a las fiscales.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="SalarioDiarioIntegrado" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="SalarioDiarioIntegrado" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo opcional para expresar el salario que se
 									integra con los pagos hechos en efectivo por cuota diaria,
@@ -380,8 +362,7 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="PrecioAlOtorgarse"
-													use="required">
+												<xs:attribute name="PrecioAlOtorgarse" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															expresar el precio establecido al
@@ -398,8 +379,7 @@
 												</xs:attribute>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="HorasExtra" minOccurs="0"
-											maxOccurs="unbounded">
+										<xs:element name="HorasExtra" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>Nodo condicional para expresar las
 													horas extra aplicables.</xs:documentation>
@@ -419,8 +399,7 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="TipoHoras"
-													type="catNomina:c_TipoHoras" use="required">
+												<xs:attribute name="TipoHoras" type="catNomina:c_TipoHoras" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															expresar el tipo de pago de las horas
@@ -440,8 +419,7 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="ImportePagado"
-													type="tdCFDI:t_ImporteMXN" use="required">
+												<xs:attribute name="ImportePagado" type="tdCFDI:t_ImporteMXN" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															expresar el importe pagado por las horas
@@ -451,8 +429,7 @@
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
-									<xs:attribute name="TipoPercepcion"
-										type="catNomina:c_TipoPercepcion" use="required">
+									<xs:attribute name="TipoPercepcion" type="catNomina:c_TipoPercepcion" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar la
 												Clave agrupadora bajo la cual se clasifica la
@@ -489,15 +466,13 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="ImporteGravado" type="tdCFDI:t_ImporteMXN"
-										use="required">
+									<xs:attribute name="ImporteGravado" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido, representa el
 												importe gravado de un concepto de percepción.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="ImporteExento" type="tdCFDI:t_ImporteMXN"
-										use="required">
+									<xs:attribute name="ImporteExento" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido, representa el
 												importe exento de un concepto de percepción.</xs:documentation>
@@ -512,24 +487,21 @@
 										retiro.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
-									<xs:attribute name="TotalUnaExhibicion"
-										type="tdCFDI:t_ImporteMXN" use="optional">
+									<xs:attribute name="TotalUnaExhibicion" type="tdCFDI:t_ImporteMXN" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo condicional que indica el
 												monto total del pago cuando se realiza en una sola
 												exhibición.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="TotalParcialidad" type="tdCFDI:t_ImporteMXN"
-										use="optional">
+									<xs:attribute name="TotalParcialidad" type="tdCFDI:t_ImporteMXN" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo condicional para expresar los
 												ingresos totales por pago cuando se hace en
 												parcialidades.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="MontoDiario" type="tdCFDI:t_ImporteMXN"
-										use="optional">
+									<xs:attribute name="MontoDiario" type="tdCFDI:t_ImporteMXN" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo condicional para expresar el
 												monto diario percibido por jubilación, pensiones o
@@ -537,15 +509,13 @@
 												parcialidades.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="IngresoAcumulable"
-										type="tdCFDI:t_ImporteMXN" use="required">
+									<xs:attribute name="IngresoAcumulable" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar los
 												ingresos acumulables.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="IngresoNoAcumulable"
-										type="tdCFDI:t_ImporteMXN" use="required">
+									<xs:attribute name="IngresoNoAcumulable" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar los
 												ingresos no acumulables.</xs:documentation>
@@ -559,8 +529,7 @@
 										detallada de otros pagos por separación.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
-									<xs:attribute name="TotalPagado" type="tdCFDI:t_ImporteMXN"
-										use="required">
+									<xs:attribute name="TotalPagado" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido que indica el monto
 												total del pago.</xs:documentation>
@@ -581,22 +550,19 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="UltimoSueldoMensOrd"
-										type="tdCFDI:t_ImporteMXN" use="required">
+									<xs:attribute name="UltimoSueldoMensOrd" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido que indica el
 												último sueldo mensual ordinario.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="IngresoAcumulable"
-										type="tdCFDI:t_ImporteMXN" use="required">
+									<xs:attribute name="IngresoAcumulable" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar los
 												ingresos acumulables.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="IngresoNoAcumulable"
-										type="tdCFDI:t_ImporteMXN" use="required">
+									<xs:attribute name="IngresoNoAcumulable" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido que indica los
 												ingresos no acumulables.</xs:documentation>
@@ -612,16 +578,14 @@
 									y conceptos asimilados a salarios.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalSeparacionIndemnizacion" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalSeparacionIndemnizacion" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el importe
 									exento y gravado de las claves tipo percepción 022 Prima por
 									Antigüedad, 023 Pagos por separación y 025 Indemnizaciones.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalJubilacionPensionRetiro" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalJubilacionPensionRetiro" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el importe
 									exento y gravado de las claves tipo percepción 039 Jubilaciones,
@@ -655,8 +619,7 @@
 										detallada de una deducción.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
-									<xs:attribute name="TipoDeduccion"
-										type="catNomina:c_TipoDeduccion" use="required">
+									<xs:attribute name="TipoDeduccion" type="catNomina:c_TipoDeduccion" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para registrar la
 												clave agrupadora que clasifica la deducción.</xs:documentation>
@@ -690,8 +653,7 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="Importe" type="tdCFDI:t_ImporteMXN"
-										use="required">
+									<xs:attribute name="Importe" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para registrar el
 												importe del concepto de deducción.</xs:documentation>
@@ -700,8 +662,7 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="TotalOtrasDeducciones" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalOtrasDeducciones" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de
 									deducciones que se relacionan en el comprobante, donde la clave
@@ -709,8 +670,7 @@
 									ISR.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalImpuestosRetenidos" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalImpuestosRetenidos" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de los
 									impuestos federales retenidos, es decir, donde la clave de tipo
@@ -739,8 +699,7 @@
 													trabajador.</xs:documentation>
 											</xs:annotation>
 											<xs:complexType>
-												<xs:attribute name="SubsidioCausado"
-													type="tdCFDI:t_ImporteMXN" use="required">
+												<xs:attribute name="SubsidioCausado" type="tdCFDI:t_ImporteMXN" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															expresar el subsidio causado conforme a
@@ -758,8 +717,7 @@
 													saldos a favor de un trabajador.</xs:documentation>
 											</xs:annotation>
 											<xs:complexType>
-												<xs:attribute name="SaldoAFavor"
-													type="tdCFDI:t_ImporteMXN" use="required">
+												<xs:attribute name="SaldoAFavor" type="tdCFDI:t_ImporteMXN" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															expresar el saldo a favor determinado
@@ -782,8 +740,7 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="RemanenteSalFav"
-													type="tdCFDI:t_ImporteMXN" use="required">
+												<xs:attribute name="RemanenteSalFav" type="tdCFDI:t_ImporteMXN" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															expresar el remanente del saldo a favor
@@ -793,8 +750,7 @@
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
-									<xs:attribute name="TipoOtroPago"
-										type="catNomina:c_TipoOtroPago" use="required">
+									<xs:attribute name="TipoOtroPago" type="catNomina:c_TipoOtroPago" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar la
 												clave agrupadora bajo la cual se clasifica el otro
@@ -831,8 +787,7 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="Importe" type="tdCFDI:t_ImporteMXN"
-										use="required">
+									<xs:attribute name="Importe" type="tdCFDI:t_ImporteMXN" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar el
 												importe del concepto de otro pago.</xs:documentation>
@@ -869,15 +824,13 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="TipoIncapacidad"
-										type="catNomina:c_TipoIncapacidad" use="required">
+									<xs:attribute name="TipoIncapacidad" type="catNomina:c_TipoIncapacidad" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar la
 												razón de la incapacidad.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="ImporteMonetario" type="tdCFDI:t_ImporteMXN"
-										use="optional">
+									<xs:attribute name="ImporteMonetario" type="tdCFDI:t_ImporteMXN" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo condicional para expresar el
 												monto del importe monetario de la incapacidad.</xs:documentation>
@@ -897,8 +850,7 @@
 			</xs:attribute>
 			<xs:attribute name="TipoNomina" type="catNomina:c_TipoNomina" use="required">
 				<xs:annotation>
-					<xs:documentation>Atributo requerido para indicar el tipo de nómina, puede ser
-						O= Nómina ordinaria o E= Nómina extraordinaria.</xs:documentation>
+					<xs:documentation>Atributo requerido para indicar el tipo de nómina, puede ser O= Nómina ordinaria o E= Nómina extraordinaria.</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
 			<xs:attribute name="FechaPago" type="tdCFDI:t_Fecha" use="required">

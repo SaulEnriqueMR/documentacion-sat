@@ -1,8 +1,5 @@
-<xs:schema
-    xmlns:fideicomisonoempresarial="http://www.sat.gob.mx/esquemas/retencionpago/1/fideicomisonoempresarial"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/fideicomisonoempresarial"
-    elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:fideicomisonoempresarial="http://www.sat.gob.mx/esquemas/retencionpago/1/fideicomisonoempresarial"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/fideicomisonoempresarial" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:element name="Fideicomisonoempresarial">
         <xs:annotation>
             <xs:documentation> Complemento para expresar la información sobre los fideicomisos que
@@ -42,18 +39,14 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="MontTotEntradasPeriodo"
-                            type="fideicomisonoempresarial:t_Importe"
-                            use="required">
+                        <xs:attribute name="MontTotEntradasPeriodo" type="fideicomisonoempresarial:t_Importe" use="required">
                             <xs:annotation>
                                 <xs:documentation> Atributo requerido para expresar el importe total
                                     de los ingresos del periodo de los fideicomisos que no realizan
                                     actividades empresariales </xs:documentation>
                             </xs:annotation>
                         </xs:attribute>
-                        <xs:attribute name="PartPropAcumDelFideicom"
-                            type="fideicomisonoempresarial:t_Importe"
-                            use="required">
+                        <xs:attribute name="PartPropAcumDelFideicom" type="fideicomisonoempresarial:t_Importe" use="required">
                             <xs:annotation>
                                 <xs:documentation> Atributo requerido para expresar la parte
                                     proporcional de los ingresos acumulables del periodo que
@@ -107,18 +100,14 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="MontTotEgresPeriodo"
-                            type="fideicomisonoempresarial:t_Importe"
-                            use="required">
+                        <xs:attribute name="MontTotEgresPeriodo" type="fideicomisonoempresarial:t_Importe" use="required">
                             <xs:annotation>
                                 <xs:documentation> Atributo requerido para expresar el importe total
                                     de los egresos del periodo de fideicomiso que no realizan
                                     actividades empresariales </xs:documentation>
                             </xs:annotation>
                         </xs:attribute>
-                        <xs:attribute name="PartPropDelFideicom"
-                            type="fideicomisonoempresarial:t_Importe"
-                            use="required">
+                        <xs:attribute name="PartPropDelFideicom" type="fideicomisonoempresarial:t_Importe" use="required">
                             <xs:annotation>
                                 <xs:documentation> Atributo requerido para expresar la parte
                                     proporcional de las deducciones autorizadas del periodo que
@@ -145,9 +134,7 @@
                             al fideicomiso </xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
-                        <xs:attribute name="MontRetRelPagFideic"
-                            type="fideicomisonoempresarial:t_Importe"
-                            use="required">
+                        <xs:attribute name="MontRetRelPagFideic" type="fideicomisonoempresarial:t_Importe" use="required">
                             <xs:annotation>
                                 <xs:documentation> Atributo requerido para expresar el monto de la
                                     retenciones con relación al fideicomiso </xs:documentation>

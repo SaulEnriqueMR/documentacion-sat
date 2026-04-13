@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:decreto="http://www.sat.gob.mx/renovacionysustitucionvehiculos"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="http://www.sat.gob.mx/renovacionysustitucionvehiculos"
-  elementFormDefault="qualified"
-  attributeFormDefault="unqualified">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/renovacionysustitucionvehiculos" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:element name="renovacionysustitucionvehiculos">
     <xs:annotation>
       <xs:documentation>Complemento para incorporar la información relativa a los estímulos por la
@@ -20,8 +17,7 @@
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="VehiculosUsadosEnajenadoPermAlFab" minOccurs="1"
-                maxOccurs="unbounded">
+              <xs:element name="VehiculosUsadosEnajenadoPermAlFab" minOccurs="1" maxOccurs="unbounded">
                 <xs:annotation>
                   <xs:documentation>Datos del vehículo o vehículos usados que enajena el
                     permisionario a cuenta del precio del vehículo nuevo o seminuevo (pueden

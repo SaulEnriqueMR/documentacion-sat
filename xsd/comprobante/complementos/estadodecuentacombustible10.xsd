@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ecc="http://www.sat.gob.mx/ecc" targetNamespace="http://www.sat.gob.mx/ecc" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:ecc="http://www.sat.gob.mx/ecc" targetNamespace="http://www.sat.gob.mx/ecc" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="EstadoDeCuentaCombustible">
 		<xs:annotation>
 			<xs:documentation>Complemento al Comprobante Fiscal Digital (CFD) y Comprobante Fiscal Digital por Internet (CFDI) para integrar la información aplicable al estado de cuenta emitido por un prestador de servicios de monedero electrónico.</xs:documentation>

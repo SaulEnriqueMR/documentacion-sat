@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:cce="http://www.sat.gob.mx/ComercioExterior">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+  xmlns:cce="http://www.sat.gob.mx/ComercioExterior">
 
-  <xsl:template match="cce:ComercioExterior"> 
-    <!--Manejador de nodos tipo ComercioExterior-->
+  <xsl:template match="cce:ComercioExterior">
+    <!--Manejador
+    de nodos tipo ComercioExterior-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@Version" />
     </xsl:call-template>
@@ -52,7 +55,7 @@
     </xsl:call-template>
   </xsl:template>
 
-  
+
   <xsl:template match="cce:Receptor">
     <!--  Tratamiento de los atributos de cce:Receptor-->
     <xsl:call-template name="Opcional">
@@ -80,13 +83,13 @@
     </xsl:call-template>
     <!--  Manejo de los nodos dependientes -->
     <xsl:apply-templates select="./cce:Domicilio" />
- </xsl:template>
+  </xsl:template>
 
 
   <xsl:template match="cce:Mercancias">
     <!--  Iniciamos el manejo de los nodos dependientes -->
     <xsl:for-each select="./cce:Mercancia">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
   </xsl:template>
 
@@ -125,7 +128,7 @@
     </xsl:call-template>
   </xsl:template>
 
-  
+
   <xsl:template match="cce:Mercancia">
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@NoIdentificacion" />
@@ -148,7 +151,7 @@
 
     <!--  Manejo de los nodos dependientes -->
     <xsl:for-each select="./cce:DescripcionesEspecificas">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
@@ -169,7 +172,6 @@
       <xsl:with-param name="valor" select="./@NumeroSerie" />
     </xsl:call-template>
   </xsl:template>
-
 
 
 </xsl:stylesheet>

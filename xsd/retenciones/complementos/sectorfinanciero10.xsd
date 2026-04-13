@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:sectorfinanciero="http://www.sat.gob.mx/esquemas/retencionpago/1/sectorfinanciero" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/sectorfinanciero" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:sectorfinanciero="http://www.sat.gob.mx/esquemas/retencionpago/1/sectorfinanciero"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/sectorfinanciero" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="SectorFinanciero">
 		<xs:annotation>
 			<xs:documentation>Complemento requerido para uso exclusivo de las entidades integrantes del sistema financiero que actúen en su carácter de fiduciarias</xs:documentation>

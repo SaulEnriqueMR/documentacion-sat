@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:aieps="http://www.sat.gob.mx/acreditamiento"
-xmlns:xs="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://www.sat.gob.mx/acreditamiento"
-elementFormDefault="qualified"
-attributeFormDefault="unqualified">
-<xs:element name="acreditamientoIEPS">
-  <xs:annotation>
-    <xs:documentation>Nodo requerido para expresar los detalles de la descripción del concepto para efectos de poder determinar el monto del estímulo aplicable.</xs:documentation>
-  </xs:annotation>
-  <xs:complexType>
-    <xs:attribute name="Version" type="xs:string" use="required" fixed="1.0">
-      <xs:annotation>
-        <xs:documentation>Atributo requerido que indica la versión del complemento concepto.</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="TAR" use="required">
-      <xs:annotation>
-        <xs:documentation>Atributo requerido  para expresar la clave de la Terminal de Almacenamiento y Reparto (CVE TAR), conforme al catálogo publicado en la página de Internet del SAT,  mismo que servirá para identificar la cuota por litro conforme a las tablas que publique la Secretaría de Hacienda y Crédito Público para determinar el monto del estímulo fiscal.</xs:documentation>
-      </xs:annotation>
-      <xs:simpleType>
-        <xs:restriction base="aieps:c_TAR">
-          <xs:length value="3"/>
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:attribute>
-  </xs:complexType>
-</xs:element>
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/acreditamiento" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="acreditamientoIEPS">
+    <xs:annotation>
+      <xs:documentation>Nodo requerido para expresar los detalles de la descripción del concepto para efectos de poder determinar el monto del estímulo aplicable.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="Version" type="xs:string" use="required" fixed="1.0">
+        <xs:annotation>
+          <xs:documentation>Atributo requerido que indica la versión del complemento concepto.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="TAR" use="required">
+        <xs:annotation>
+          <xs:documentation>Atributo requerido  para expresar la clave de la Terminal de Almacenamiento y Reparto (CVE TAR), conforme al catálogo publicado en la página de Internet del SAT,  mismo que servirá para identificar la cuota por litro conforme a las tablas que publique la Secretaría de Hacienda y Crédito Público para determinar el monto del estímulo fiscal.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="aieps:c_TAR">
+            <xs:length value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
   <xs:simpleType name="c_TAR">
     <xs:restriction base="xs:string">
       <xs:enumeration value="617"/>
@@ -109,4 +106,3 @@ attributeFormDefault="unqualified">
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
-

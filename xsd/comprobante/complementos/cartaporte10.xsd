@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:cartaporte="http://www.sat.gob.mx/CartaPorte" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" xmlns:catComExt="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt" xmlns:catCartaPorte="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/CartaPorte" targetNamespace="http://www.sat.gob.mx/CartaPorte" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:cartaporte="http://www.sat.gob.mx/CartaPorte"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
+	xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
+	xmlns:catComExt="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt"
+	xmlns:catCartaPorte="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/CartaPorte" targetNamespace="http://www.sat.gob.mx/CartaPorte" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"/>
 	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"/>
 	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt/catComExt.xsd"/>
@@ -49,7 +54,7 @@
 													</xs:annotation>
 													<xs:simpleType>
 														<xs:restriction base="xs:string">
-														    <xs:minLength value="1"/>
+															<xs:minLength value="1"/>
 															<xs:maxLength value="254"/>
 															<xs:whiteSpace value="collapse"/>
 															<xs:pattern value="[^|]{1,254}"/>

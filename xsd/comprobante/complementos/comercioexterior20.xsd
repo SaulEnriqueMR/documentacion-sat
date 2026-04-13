@@ -3,15 +3,10 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
 	xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
-	xmlns:catComExt="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt"
-	targetNamespace="http://www.sat.gob.mx/ComercioExterior20" elementFormDefault="qualified"
-	attributeFormDefault="unqualified">
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd" />
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd" />
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt/catComExt.xsd" />
+	xmlns:catComExt="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt" targetNamespace="http://www.sat.gob.mx/ComercioExterior20" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd" />
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd" />
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt/catComExt.xsd" />
 	<xs:element name="ComercioExterior">
 		<xs:annotation>
 			<xs:documentation>Complemento para incorporar la información en caso de exportación
@@ -32,24 +27,21 @@
 										emisor del comprobante.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
-									<xs:attribute name="Calle" type="tdCFDI:t_Descrip100"
-										use="required">
+									<xs:attribute name="Calle" type="tdCFDI:t_Descrip100" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido que sirve para
 												precisar la calle en que está ubicado el domicilio
 												del emisor del comprobante.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="NumeroExterior"
-										type="tdCFDI:t_NumeroDomicilio" use="optional">
+									<xs:attribute name="NumeroExterior" type="tdCFDI:t_NumeroDomicilio" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar el número exterior en donde se ubica el
 												domicilio del emisor del comprobante.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="NumeroInterior"
-										type="tdCFDI:t_NumeroDomicilio" use="optional">
+									<xs:attribute name="NumeroInterior" type="tdCFDI:t_NumeroDomicilio" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar el número interior, en caso de existir, en
@@ -57,8 +49,7 @@
 												comprobante.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Colonia" type="catCFDI:c_Colonia"
-										use="optional">
+									<xs:attribute name="Colonia" type="catCFDI:c_Colonia" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar la clave de la colonia en donde se ubica el
@@ -67,8 +58,7 @@
 												en internet.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Localidad" type="catCFDI:c_Localidad"
-										use="optional">
+									<xs:attribute name="Localidad" type="catCFDI:c_Localidad" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												precisar la clave de la ciudad, población, distrito
@@ -78,8 +68,7 @@
 												internet.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Referencia" type="tdCFDI:t_Referencia"
-										use="optional">
+									<xs:attribute name="Referencia" type="tdCFDI:t_Referencia" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional para expresar una
 												referencia geográfica adicional que permita una más
@@ -87,8 +76,7 @@
 												del comprobante, por ejemplo las coordenadas GPS.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Municipio" type="catCFDI:c_Municipio"
-										use="optional">
+									<xs:attribute name="Municipio" type="catCFDI:c_Municipio" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												registrar el municipio, delegación o alcaldía,
@@ -97,8 +85,7 @@
 												publicado en el Portal del SAT en internet.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Estado" type="catCFDI:c_Estado"
-										use="required">
+									<xs:attribute name="Estado" type="catCFDI:c_Estado" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para señalar la
 												clave del estado en donde se encuentra ubicado el
@@ -118,8 +105,7 @@
 												especificación ISO 3166-1. Debe tener el valor MEX.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="CodigoPostal" type="catCFDI:c_CodigoPostal"
-										use="required">
+									<xs:attribute name="CodigoPostal" type="catCFDI:c_CodigoPostal" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido que sirve para
 												registrar la clave del código postal en donde se
@@ -185,24 +171,21 @@
 										receptor del comprobante.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
-									<xs:attribute name="Calle" type="tdCFDI:t_Descrip100"
-										use="required">
+									<xs:attribute name="Calle" type="tdCFDI:t_Descrip100" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido que sirve para
 												precisar la calle en la que está ubicado el
 												domicilio del receptor del comprobante. </xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="NumeroExterior"
-										type="tdCFDI:t_NumeroDomicilio" use="optional">
+									<xs:attribute name="NumeroExterior" type="tdCFDI:t_NumeroDomicilio" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar el número exterior en donde se ubica el
 												domicilio del receptor del comprobante.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="NumeroInterior"
-										type="tdCFDI:t_NumeroDomicilio" use="optional">
+									<xs:attribute name="NumeroInterior" type="tdCFDI:t_NumeroDomicilio" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar el número interior, en caso de existir, en
@@ -210,16 +193,14 @@
 												comprobante.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Colonia" type="tdCFDI:t_Descrip120"
-										use="optional">
+									<xs:attribute name="Colonia" type="tdCFDI:t_Descrip120" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar la colonia o dato análogo en donde se ubica
 												el domicilio del receptor del comprobante.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Localidad" type="tdCFDI:t_Descrip120"
-										use="optional">
+									<xs:attribute name="Localidad" type="tdCFDI:t_Descrip120" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												precisar la ciudad, población, otro dato análogo en
@@ -227,8 +208,7 @@
 												comprobante.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Referencia" type="tdCFDI:t_Referencia"
-										use="optional">
+									<xs:attribute name="Referencia" type="tdCFDI:t_Referencia" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional para registrar una
 												referencia geográfica adicional que permita una más
@@ -236,8 +216,7 @@
 												del comprobante, por ejemplo las coordenadas GPS.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Municipio" type="tdCFDI:t_Descrip120"
-										use="optional">
+									<xs:attribute name="Municipio" type="tdCFDI:t_Descrip120" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												registrar el municipio, delegación o alcaldía,
@@ -319,24 +298,21 @@
 										destinatario de la mercancía.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
-									<xs:attribute name="Calle" type="tdCFDI:t_Descrip100"
-										use="required">
+									<xs:attribute name="Calle" type="tdCFDI:t_Descrip100" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido que sirve para
 												precisar la calle en que está ubicado el domicilio
 												del destinatario de la mercancía.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="NumeroExterior"
-										type="tdCFDI:t_NumeroDomicilio" use="optional">
+									<xs:attribute name="NumeroExterior" type="tdCFDI:t_NumeroDomicilio" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar el número exterior en donde se ubica el
 												domicilio del destinatario de la mercancía.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="NumeroInterior"
-										type="tdCFDI:t_NumeroDomicilio" use="optional">
+									<xs:attribute name="NumeroInterior" type="tdCFDI:t_NumeroDomicilio" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar el número interior, en caso de existir, en
@@ -344,16 +320,14 @@
 												mercancía.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Colonia" type="tdCFDI:t_Descrip120"
-										use="optional">
+									<xs:attribute name="Colonia" type="tdCFDI:t_Descrip120" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												expresar la colonia o dato análogo en donde se ubica
 												el domicilio del destinatario de la mercancía.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Localidad" type="tdCFDI:t_Descrip120"
-										use="optional">
+									<xs:attribute name="Localidad" type="tdCFDI:t_Descrip120" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												precisar la ciudad, población, distrito u otro
@@ -361,8 +335,7 @@
 												destinatario de la mercancía.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Referencia" type="tdCFDI:t_Referencia"
-										use="optional">
+									<xs:attribute name="Referencia" type="tdCFDI:t_Referencia" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional para registrar una
 												referencia geográfica adicional que permita una
@@ -371,8 +344,7 @@
 												coordenadas GPS.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="Municipio" type="tdCFDI:t_Descrip120"
-										use="optional">
+									<xs:attribute name="Municipio" type="tdCFDI:t_Descrip120" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo opcional que sirve para
 												precisar el municipio, delegación o alcaldía,
@@ -471,8 +443,7 @@
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="DescripcionesEspecificas" minOccurs="0"
-											maxOccurs="unbounded">
+										<xs:element name="DescripcionesEspecificas" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>Nodo opcional que indica la lista
 													de descripciones específicas de la mercancía.
@@ -556,8 +527,7 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="FraccionArancelaria"
-										type="catComExt:c_FraccionArancelaria" use="optional">
+									<xs:attribute name="FraccionArancelaria" type="catComExt:c_FraccionArancelaria" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo condicional que sirve para
 												expresar la clave de la fracción arancelaria
@@ -583,8 +553,7 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="UnidadAduana"
-										type="catComExt:c_UnidadAduana" use="optional">
+									<xs:attribute name="UnidadAduana" type="catComExt:c_UnidadAduana" use="optional">
 										<xs:annotation>
 											<xs:documentation>Atributo condicional para precisar la
 												clave de la unidad de medida aplicable para la

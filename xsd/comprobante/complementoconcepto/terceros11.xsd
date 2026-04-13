@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:terceros="http://www.sat.gob.mx/terceros" targetNamespace="http://www.sat.gob.mx/terceros"
-	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	xmlns:terceros="http://www.sat.gob.mx/terceros" targetNamespace="http://www.sat.gob.mx/terceros" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="PorCuentadeTerceros">
 		<xs:annotation>
 			<xs:documentation> Complemento concepto para la emisión de Comprobante Fiscal Digital
@@ -40,9 +39,7 @@
 						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="InformacionAduanera"
-									type="terceros:t_InformacionAduanera" minOccurs="0"
-									maxOccurs="unbounded">
+								<xs:element name="InformacionAduanera" type="terceros:t_InformacionAduanera" minOccurs="0" maxOccurs="unbounded">
 									<xs:annotation>
 										<xs:documentation>Nodo opcional para introducir la
 											información aduanera aplicable cuando se trate de partes
@@ -100,8 +97,7 @@
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="valorUnitario" type="terceros:t_Importe"
-								use="optional">
+							<xs:attribute name="valorUnitario" type="terceros:t_Importe" use="optional">
 								<xs:annotation>
 									<xs:documentation>Atributo opcional para precisar el valor o
 										precio unitario del bien o servicio cubierto por la presente
@@ -183,8 +179,7 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="importe"
-													type="terceros:t_Importe" use="required">
+												<xs:attribute name="importe" type="terceros:t_Importe" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															señalar el importe o monto del impuesto
@@ -233,8 +228,7 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="tasa" type="terceros:t_Importe"
-													use="required">
+												<xs:attribute name="tasa" type="terceros:t_Importe" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															señalar la tasa del impuesto que se
@@ -242,8 +236,7 @@
 															el comprobante</xs:documentation>
 													</xs:annotation>
 												</xs:attribute>
-												<xs:attribute name="importe"
-													type="terceros:t_Importe" use="required">
+												<xs:attribute name="importe" type="terceros:t_Importe" use="required">
 													<xs:annotation>
 														<xs:documentation>Atributo requerido para
 															señalar el importe del impuesto

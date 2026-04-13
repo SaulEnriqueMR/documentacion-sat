@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ecc11="http://www.sat.gob.mx/EstadoDeCuentaCombustible">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+  xmlns:ecc11="http://www.sat.gob.mx/EstadoDeCuentaCombustible">
 
   <xsl:template match="ecc11:EstadoDeCuentaCombustible">
-    <!--Manejador de nodos tipo EstadoDeCuentaCombustible-->
+    <!--Manejador
+    de nodos tipo EstadoDeCuentaCombustible-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@Version" />
     </xsl:call-template>
@@ -27,20 +30,21 @@
   <xsl:template match="ecc11:Conceptos">
     <!--  Iniciamos el tratamiento de los atributos de ecc11:ConceptoEstadoDeCuentaCombustible-->
     <xsl:for-each select="./ecc11:ConceptoEstadoDeCuentaCombustible">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
-    
+
   </xsl:template>
 
   <xsl:template match="ecc11:Traslados">
     <!--  Iniciamos el tratamiento de los atributos de ecc11:Traslado-->
     <xsl:for-each select="./ecc11:Traslado">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
   </xsl:template>
-  
-  
-  <!--  Iniciamos el manejo de los elementos hijo en la secuencia ConceptoEstadoDeCuentaCombustible-->
+
+
+  <!--  Iniciamos el manejo de los elementos hijo en la secuencia
+  ConceptoEstadoDeCuentaCombustible-->
   <xsl:template match="ecc11:ConceptoEstadoDeCuentaCombustible">
     <!--  Iniciamos el manejo de los nodos dependientes -->
     <xsl:call-template name="Requerido">
@@ -98,5 +102,5 @@
     </xsl:call-template>
   </xsl:template>
 
-  
+
 </xsl:stylesheet>

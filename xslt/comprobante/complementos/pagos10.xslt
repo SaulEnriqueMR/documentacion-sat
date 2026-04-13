@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:pago10="http://www.sat.gob.mx/Pagos">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+  xmlns:pago10="http://www.sat.gob.mx/Pagos">
 
   <xsl:template match="pago10:Pagos">
-    <!--Manejador de Atributos Pagos-->
+    <!--Manejador
+    de Atributos Pagos-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@Version" />
     </xsl:call-template>
 
     <!--  Iniciamos el manejo de los elementos hijo en la secuencia -->
     <xsl:for-each select="./pago10:Pago">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
   </xsl:template>
 
@@ -62,10 +65,10 @@
 
     <!--  Iniciamos el tratamiento de los atributos de pago10:DocumentoRelacionado-->
     <xsl:for-each select="./pago10:DoctoRelacionado">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
     <xsl:for-each select="./pago10:Impuestos">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
   </xsl:template>
 
@@ -121,20 +124,20 @@
       <xsl:with-param name="valor" select="./@TotalImpuestosTrasladados" />
     </xsl:call-template>
 
-    <xsl:apply-templates select="./pago10:Retenciones"/>
-    <xsl:apply-templates select="./pago10:Traslados"/>
+    <xsl:apply-templates select="./pago10:Retenciones" />
+    <xsl:apply-templates select="./pago10:Traslados" />
 
   </xsl:template>
 
   <xsl:template match="pago10:Retenciones">
     <xsl:for-each select="./pago10:Retencion">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="pago10:Traslados">
     <xsl:for-each select="./pago10:Traslado">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:plataformasTecnologicas="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10" xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" xmlns:c_retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos" xmlns:CatPlataformasTecnologicas="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:plataformasTecnologicas="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10"
+  xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
+  xmlns:c_retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
+  xmlns:CatPlataformasTecnologicas="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:import namespace="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos" schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos/CatPlataformasTecnologicas.xsd"/>
   <xs:import namespace="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos" schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos/catRetenciones.xsd"/>
   <xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"/>

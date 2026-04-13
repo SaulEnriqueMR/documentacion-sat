@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema
-	xmlns:intereseshipotecarios="http://www.sat.gob.mx/esquemas/retencionpago/1/intereseshipotecarios"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/intereseshipotecarios"
-	elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:intereseshipotecarios="http://www.sat.gob.mx/esquemas/retencionpago/1/intereseshipotecarios"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/intereseshipotecarios" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="Intereseshipotecarios">
 		<xs:annotation>
 			<xs:documentation>Complemento para expresar la información sobre Intereses reales
@@ -36,29 +33,25 @@
 						llevo a cabo en el ejercicio en curso</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
-			<xs:attribute name="PropDeducDelCredit" type="intereseshipotecarios:t_Importe"
-				use="optional">
+			<xs:attribute name="PropDeducDelCredit" type="intereseshipotecarios:t_Importe" use="optional">
 				<xs:annotation>
 					<xs:documentation>Atributo opcional que expresa la proporción deducible del
 						crédito aplicable sobre los intereses reales devengados y pagados</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
-			<xs:attribute name="MontTotIntNominalesDev" type="intereseshipotecarios:t_Importe"
-				use="optional">
+			<xs:attribute name="MontTotIntNominalesDev" type="intereseshipotecarios:t_Importe" use="optional">
 				<xs:annotation>
 					<xs:documentation>Atributo opcional que expresa el monto total de intereses
 						nominales devengados </xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
-			<xs:attribute name="MontTotIntNominalesDevYPag" type="intereseshipotecarios:t_Importe"
-				use="optional">
+			<xs:attribute name="MontTotIntNominalesDevYPag" type="intereseshipotecarios:t_Importe" use="optional">
 				<xs:annotation>
 					<xs:documentation>Atributo opcional que expresa el monto total de intereses
 						nominales devengados y pagados</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
-			<xs:attribute name="MontTotIntRealPagDeduc" type="intereseshipotecarios:t_Importe"
-				use="optional">
+			<xs:attribute name="MontTotIntRealPagDeduc" type="intereseshipotecarios:t_Importe" use="optional">
 				<xs:annotation>
 					<xs:documentation>Atributo opcional que expresa el monto total de intereses
 						reales pagados deducibles </xs:documentation>

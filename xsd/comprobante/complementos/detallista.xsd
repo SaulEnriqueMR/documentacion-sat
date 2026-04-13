@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2009 (http://www.altova.com) by SAT (.) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:detallista="http://www.sat.gob.mx/detallista"
-	targetNamespace="http://www.sat.gob.mx/detallista" elementFormDefault="qualified"
-	attributeFormDefault="unqualified">
+	xmlns:detallista="http://www.sat.gob.mx/detallista" targetNamespace="http://www.sat.gob.mx/detallista" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="detallista">
 		<xs:annotation>
 			<xs:documentation>Complemento requerido para la emision y recepcion de comprobantes
@@ -278,8 +276,7 @@
 													<xs:restriction base="xs:NMTOKEN">
 														<xs:minLength value="1" />
 														<xs:maxLength value="40" />
-														<xs:enumeration
-															value="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY" />
+														<xs:enumeration value="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY" />
 														<xs:enumeration value="IEPS_REFERENCE" />
 													</xs:restriction>
 												</xs:simpleType>
@@ -595,24 +592,21 @@
 																			el numero de periodos</xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction
-																			base="xs:string">
+																		<xs:restriction base="xs:string">
 																			<xs:minLength value="1" />
 																			<xs:maxLength value="5" />
 																		</xs:restriction>
 																	</xs:simpleType>
 																</xs:element>
 															</xs:sequence>
-															<xs:attribute name="timePeriod"
-																use="required">
+															<xs:attribute name="timePeriod" use="required">
 																<xs:annotation>
 																	<xs:documentation>Atributo para
 																		especificar el tipo de
 																		periodo</xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction
-																		base="xs:NMTOKEN">
+																	<xs:restriction base="xs:NMTOKEN">
 																		<xs:minLength value="1" />
 																		<xs:maxLength value="6" />
 																		<xs:enumeration value="DAYS" />
@@ -880,8 +874,7 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="alternateTradeItemIdentification" minOccurs="0"
-								maxOccurs="unbounded">
+							<xs:element name="alternateTradeItemIdentification" minOccurs="0" maxOccurs="unbounded">
 								<xs:annotation>
 									<xs:documentation>Nodo opcional que especifica el numero de
 										identificación adicional para el artículo.</xs:documentation>
@@ -902,8 +895,7 @@
 														<xs:enumeration value="BUYER_ASSIGNED" />
 														<xs:enumeration value="SUPPLIER_ASSIGNED" />
 														<xs:enumeration value="SERIAL_NUMBER" />
-														<xs:enumeration
-															value="GLOBAL_TRADE_ITEM_IDENTIFICATION" />
+														<xs:enumeration value="GLOBAL_TRADE_ITEM_IDENTIFICATION" />
 													</xs:restriction>
 												</xs:simpleType>
 											</xs:attribute>
@@ -954,8 +946,7 @@
 								<xs:complexType mixed="true">
 									<xs:simpleContent>
 										<xs:extension base="xs:decimal">
-											<xs:attribute name="unitOfMeasure" type="xs:NMTOKEN"
-												use="required">
+											<xs:attribute name="unitOfMeasure" type="xs:NMTOKEN" use="required">
 												<xs:annotation>
 													<xs:documentation>Atributo para especificar la
 														unidad de medida, solo si el articulo es de
@@ -1212,12 +1203,9 @@
 																<xs:restriction base="xs:NMTOKEN">
 																	<xs:maxLength value="35" />
 																	<xs:minLength value="1" />
-																	<xs:enumeration
-																		value="EXCHANGE_PALLETS" />
-																	<xs:enumeration
-																		value="RETURN_PALLETS" />
-																	<xs:enumeration
-																		value="PALLET_80x100" />
+																	<xs:enumeration value="EXCHANGE_PALLETS" />
+																	<xs:enumeration value="RETURN_PALLETS" />
+																	<xs:enumeration value="PALLET_80x100" />
 																	<xs:enumeration value="CASE" />
 																	<xs:enumeration value="BOX" />
 																</xs:restriction>
@@ -1243,10 +1231,8 @@
 															<xs:restriction base="xs:NMTOKEN">
 																<xs:maxLength value="17" />
 																<xs:minLength value="1" />
-																<xs:enumeration
-																	value="PREPAID_BY_SELLER" />
-																<xs:enumeration
-																	value="PAID_BY_BUYER" />
+																<xs:enumeration value="PREPAID_BY_SELLER" />
+																<xs:enumeration value="PAID_BY_BUYER" />
 															</xs:restriction>
 														</xs:simpleType>
 													</xs:element>
@@ -1271,8 +1257,7 @@
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute name="productionDate"
-															type="xs:date" use="optional">
+														<xs:attribute name="productionDate" type="xs:date" use="optional">
 															<xs:annotation>
 																<xs:documentation>Atributo para
 																	especificar la fecha de
@@ -1373,8 +1358,7 @@
 																			unidad</xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction
-																			base="xs:string">
+																		<xs:restriction base="xs:string">
 																			<xs:minLength value="1" />
 																			<xs:maxLength value="5" />
 																		</xs:restriction>
@@ -1412,8 +1396,7 @@
 												<xs:maxLength value="29" />
 												<xs:enumeration value="OFF_INVOICE" />
 												<xs:enumeration value="CHARGE_TO_BE_PAID_BY_VENDOR" />
-												<xs:enumeration
-													value="CHARGE_TO_BE_PAID_BY_CUSTOMER" />
+												<xs:enumeration value="CHARGE_TO_BE_PAID_BY_CUSTOMER" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -1479,8 +1462,7 @@
 											</xs:annotation>
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="taxPercentage"
-														type="xs:decimal">
+													<xs:element name="taxPercentage" type="xs:decimal">
 														<xs:annotation>
 															<xs:documentation>Nodo requerido que
 																especifica el porcentaje del
@@ -1683,8 +1665,7 @@
 						guia del sector detallista</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
-			<xs:attribute name="documentStructureVersion" type="xs:string" use="required"
-				fixed="AMC8.1">
+			<xs:attribute name="documentStructureVersion" type="xs:string" use="required" fixed="AMC8.1">
 				<xs:annotation>
 					<xs:documentation>Versión de la estructura del documento generado "AMC8.1</xs:documentation>
 				</xs:annotation>

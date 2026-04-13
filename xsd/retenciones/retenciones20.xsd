@@ -1,15 +1,10 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:c_retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
-           xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
-           xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
-           targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/2" elementFormDefault="qualified"
-           attributeFormDefault="unqualified">
-    <xs:import namespace="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
-               schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos/catRetenciones.xsd"/>
-    <xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
-               schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"/>
-    <xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
-               schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"/>
+    xmlns:c_retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
+    xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
+    xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/2" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:import namespace="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos" schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos/catRetenciones.xsd"/>
+    <xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"/>
+    <xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"/>
     <xs:element name="Retenciones">
         <xs:annotation>
             <xs:documentation>
@@ -47,8 +42,7 @@
                                 <xs:restriction base="xs:string">
                                     <xs:length value="36"/>
                                     <xs:whiteSpace value="collapse"/>
-                                    <xs:pattern
-                                            value="[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}"/>
+                                    <xs:pattern value="[a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12}"/>
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:attribute>

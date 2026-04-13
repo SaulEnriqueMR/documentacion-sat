@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" targetNamespace="http://www.sat.gob.mx/TimbreFiscalDigital" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" targetNamespace="http://www.sat.gob.mx/TimbreFiscalDigital" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="TimbreFiscalDigital">
 		<xs:annotation>
 			<xs:documentation>Complemento requerido para el Timbrado Fiscal Digital que da valides a un Comprobante Fiscal Digital.</xs:documentation>

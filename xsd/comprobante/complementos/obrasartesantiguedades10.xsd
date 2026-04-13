@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:obrasarte="http://www.sat.gob.mx/arteantiguedades"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://www.sat.gob.mx/arteantiguedades"
-elementFormDefault="qualified"
-attributeFormDefault="unqualified">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/arteantiguedades" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:element name="obrasarteantiguedades">
     <xs:annotation>
       <xs:documentation>Complemento al Comprobante Fiscal Digital por Internet (CFDI) para el manejo de la enajenación de obras de artes plásticas y antigüedades.</xs:documentation>
@@ -66,7 +63,7 @@ attributeFormDefault="unqualified">
           <xs:documentation>Atributo opcional para expresar el IVA  del monto o valor original de adquisición, en su caso.</xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="FechaAdquisicion" use="required" >
+      <xs:attribute name="FechaAdquisicion" use="required">
         <xs:annotation>
           <xs:documentation>Atributo requerido que indica la fecha en que se adquirió originalmente la obra de arte plástica o antigüedades.</xs:documentation>
         </xs:annotation>

@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:decreto="http://www.sat.gob.mx/renovacionysustitucionvehiculos">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+  xmlns:decreto="http://www.sat.gob.mx/renovacionysustitucionvehiculos">
 
   <xsl:template match="decreto:renovacionysustitucionvehiculos">
-    <!--Manejador de nodos tipo renovacionysustitucionvehiculos-->
+    <!--Manejador
+    de nodos tipo renovacionysustitucionvehiculos-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@Version" />
     </xsl:call-template>
@@ -13,7 +16,7 @@
     <xsl:apply-templates select="./decreto:DecretoRenovVehicular" />
     <xsl:apply-templates select="./decreto:DecretoSustitVehicular" />
   </xsl:template>
-  
+
   <xsl:template match="decreto:DecretoRenovVehicular">
     <!--  Iniciamos el tratamiento de los atributos de sustitucionvehiculos:DecretoRenovVehicular-->
     <xsl:call-template name="Requerido">
@@ -21,7 +24,7 @@
     </xsl:call-template>
     <!--  Iniciamos el manejo de los nodos dependientes -->
     <xsl:for-each select="./decreto:VehiculosUsadosEnajenadoPermAlFab">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
     <xsl:apply-templates select="./decreto:VehiculoNuvoSemEnajenadoFabAlPerm" />
   </xsl:template>

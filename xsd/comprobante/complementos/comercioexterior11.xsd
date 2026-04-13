@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:cce11="http://www.sat.gob.mx/ComercioExterior11" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" xmlns:catComExt="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt" targetNamespace="http://www.sat.gob.mx/ComercioExterior11" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:cce11="http://www.sat.gob.mx/ComercioExterior11"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
+  xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
+  xmlns:catComExt="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt" targetNamespace="http://www.sat.gob.mx/ComercioExterior11" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"/>
   <xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"/>
   <xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt/catComExt.xsd"/>
@@ -15,7 +19,7 @@
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Domicilio"   minOccurs="0">
+              <xs:element name="Domicilio" minOccurs="0">
                 <xs:annotation>
                   <xs:documentation>Nodo condicional para expresar el domicilio del emisor del comprobante, es requerido cuando el complemento se registre en un CFDI versión 3.3.</xs:documentation>
                 </xs:annotation>
@@ -110,7 +114,7 @@
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Domicilio"   minOccurs="0">
+              <xs:element name="Domicilio" minOccurs="0">
                 <xs:annotation>
                   <xs:documentation>Nodo requerido para expresar el domicilio del receptor del comprobante,  cuando el complemento se registre en un CFDI versión 3.3.</xs:documentation>
                 </xs:annotation>
@@ -203,7 +207,7 @@
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Domicilio"  maxOccurs="unbounded">
+              <xs:element name="Domicilio" maxOccurs="unbounded">
                 <xs:annotation>
                   <xs:documentation>Nodo requerido para expresar el domicilio del destinatario de la mercancía.</xs:documentation>
                 </xs:annotation>
@@ -538,7 +542,7 @@
           <xs:documentation>Atributo condicional que indica el número de pesos mexicanos que equivalen a un dólar de Estados Unidos, de acuerdo al artículo 20 del Código Fiscal de la Federación.</xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="TotalUSD" use="optional"  type="tdCFDI:t_Importe">
+      <xs:attribute name="TotalUSD" use="optional" type="tdCFDI:t_Importe">
         <xs:annotation>
           <xs:documentation>Atributo condicional que indica el importe total del comprobante en dólares de Estados Unidos.</xs:documentation>
         </xs:annotation>

@@ -1,10 +1,7 @@
 <xs:schema xmlns:dividendos="http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:c_retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
-           targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos" elementFormDefault="qualified"
-           attributeFormDefault="unqualified">
-    <xs:import namespace="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
-               schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos/catRetenciones.xsd"/>
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:c_retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:import namespace="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos" schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos/catRetenciones.xsd"/>
     <xs:element name="Dividendos">
         <xs:annotation>
             <xs:documentation>
@@ -21,8 +18,7 @@
                         </xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
-                        <xs:attribute name="CveTipDivOUtil" type="c_retenciones:c_TipoDividendoOUtilidadDistribuida"
-                                      use="required">
+                        <xs:attribute name="CveTipDivOUtil" type="c_retenciones:c_TipoDividendoOUtilidadDistribuida" use="required">
                             <xs:annotation>
                                 <xs:documentation>
                                     Atributo requerido para expresar la clave del tipo de dividendo o utilidad

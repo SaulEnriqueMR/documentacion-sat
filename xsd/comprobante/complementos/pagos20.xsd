@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:pago20="http://www.sat.gob.mx/Pagos20" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema xmlns:pago20="http://www.sat.gob.mx/Pagos20"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
 	xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
-	xmlns:catPagos="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Pagos"
-	targetNamespace="http://www.sat.gob.mx/Pagos20" elementFormDefault="qualified"
-	attributeFormDefault="unqualified">
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd" />
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd" />
-	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Pagos"
-		schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Pagos/catPagos.xsd" />
+	xmlns:catPagos="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Pagos" targetNamespace="http://www.sat.gob.mx/Pagos20" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd" />
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd" />
+	<xs:import namespace="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Pagos" schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Pagos/catPagos.xsd" />
 	<xs:element name="Pagos">
 		<xs:annotation>
 			<xs:documentation>Complemento para el Comprobante Fiscal Digital por Internet (CFDI)
@@ -27,88 +23,77 @@
 							pagos y el total de los impuestos, deben ser expresados en MXN.</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
-						<xs:attribute name="TotalRetencionesIVA" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalRetencionesIVA" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de los
 									impuestos retenidos de IVA que se desprenden de los pagos. No se
 									permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalRetencionesISR" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalRetencionesISR" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de los
 									impuestos retenidos de ISR que se desprenden de los pagos. No se
 									permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalRetencionesIEPS" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalRetencionesIEPS" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de los
 									impuestos retenidos de IEPS que se desprenden de los pagos. No
 									se permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalTrasladosBaseIVA16" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalTrasladosBaseIVA16" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de la
 									base de IVA trasladado a la tasa del 16% que se desprende de los
 									pagos. No se permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalTrasladosImpuestoIVA16" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalTrasladosImpuestoIVA16" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de los
 									impuestos de IVA trasladado a la tasa del 16% que se desprenden
 									de los pagos. No se permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalTrasladosBaseIVA8" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalTrasladosBaseIVA8" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de la
 									base de IVA trasladado a la tasa del 8% que se desprende de los
 									pagos. No se permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalTrasladosImpuestoIVA8" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalTrasladosImpuestoIVA8" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de los
 									impuestos de IVA trasladado a la tasa del 8% que se desprenden
 									de los pagos. No se permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalTrasladosBaseIVA0" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalTrasladosBaseIVA0" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de la
 									base de IVA trasladado a la tasa del 0% que se desprende de los
 									pagos. No se permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalTrasladosImpuestoIVA0" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalTrasladosImpuestoIVA0" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de los
 									impuestos de IVA trasladado a la tasa del 0% que se desprenden
 									de los pagos. No se permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="TotalTrasladosBaseIVAExento" type="tdCFDI:t_ImporteMXN"
-							use="optional">
+						<xs:attribute name="TotalTrasladosBaseIVAExento" type="tdCFDI:t_ImporteMXN" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para expresar el total de la
 									base de IVA trasladado exento que se desprende de los pagos. No
 									se permiten valores negativos.</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="MontoTotalPagos" type="tdCFDI:t_ImporteMXN"
-							use="required">
+						<xs:attribute name="MontoTotalPagos" type="tdCFDI:t_ImporteMXN" use="required">
 							<xs:annotation>
 								<xs:documentation>Atributo requerido para expresar el total de los
 									pagos que se desprenden de los nodos Pago. No se permiten
@@ -150,8 +135,7 @@
 														</xs:annotation>
 														<xs:complexType>
 															<xs:sequence>
-																<xs:element name="RetencionDR"
-																	maxOccurs="unbounded">
+																<xs:element name="RetencionDR" maxOccurs="unbounded">
 																	<xs:annotation>
 																		<xs:documentation>Nodo
 																			requerido para registrar
@@ -162,8 +146,7 @@
 																			pago recibido.</xs:documentation>
 																	</xs:annotation>
 																	<xs:complexType>
-																		<xs:attribute name="BaseDR"
-																			use="required">
+																		<xs:attribute name="BaseDR" use="required">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					requerido para
@@ -186,21 +169,14 @@
 																					negativos.</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction
-																					base="xs:decimal">
-																					<xs:minInclusive
-																						value="0.000001" />
-																					<xs:fractionDigits
-																						value="6" />
-																					<xs:whiteSpace
-																						value="collapse" />
+																				<xs:restriction base="xs:decimal">
+																					<xs:minInclusive value="0.000001" />
+																					<xs:fractionDigits value="6" />
+																					<xs:whiteSpace value="collapse" />
 																				</xs:restriction>
 																			</xs:simpleType>
 																		</xs:attribute>
-																		<xs:attribute
-																			name="ImpuestoDR"
-																			type="catCFDI:c_Impuesto"
-																			use="required">
+																		<xs:attribute name="ImpuestoDR" type="catCFDI:c_Impuesto" use="required">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					requerido para
@@ -215,10 +191,7 @@
 																					relacionado.</xs:documentation>
 																			</xs:annotation>
 																		</xs:attribute>
-																		<xs:attribute
-																			name="TipoFactorDR"
-																			type="catCFDI:c_TipoFactor"
-																			use="required">
+																		<xs:attribute name="TipoFactorDR" type="catCFDI:c_TipoFactor" use="required">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					requerido para
@@ -229,9 +202,7 @@
 																					del impuesto.</xs:documentation>
 																			</xs:annotation>
 																		</xs:attribute>
-																		<xs:attribute
-																			name="TasaOCuotaDR"
-																			use="required">
+																		<xs:attribute name="TasaOCuotaDR" use="required">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					requerido para
@@ -242,21 +213,14 @@
 																					retiene.</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction
-																					base="xs:decimal">
-																					<xs:minInclusive
-																						value="0.000000" />
-																					<xs:fractionDigits
-																						value="6" />
-																					<xs:whiteSpace
-																						value="collapse" />
+																				<xs:restriction base="xs:decimal">
+																					<xs:minInclusive value="0.000000" />
+																					<xs:fractionDigits value="6" />
+																					<xs:whiteSpace value="collapse" />
 																				</xs:restriction>
 																			</xs:simpleType>
 																		</xs:attribute>
-																		<xs:attribute
-																			name="ImporteDR"
-																			type="tdCFDI:t_Importe"
-																			use="required">
+																		<xs:attribute name="ImporteDR" type="tdCFDI:t_Importe" use="required">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					requerido para
@@ -288,8 +252,7 @@
 														</xs:annotation>
 														<xs:complexType>
 															<xs:sequence>
-																<xs:element name="TrasladoDR"
-																	maxOccurs="unbounded">
+																<xs:element name="TrasladoDR" maxOccurs="unbounded">
 																	<xs:annotation>
 																		<xs:documentation>Nodo
 																			requerido para asentar
@@ -300,8 +263,7 @@
 																			pago recibido.</xs:documentation>
 																	</xs:annotation>
 																	<xs:complexType>
-																		<xs:attribute name="BaseDR"
-																			use="required">
+																		<xs:attribute name="BaseDR" use="required">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					requerido para
@@ -325,21 +287,14 @@
 																					negativos.</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction
-																					base="xs:decimal">
-																					<xs:minInclusive
-																						value="0.000001" />
-																					<xs:fractionDigits
-																						value="6" />
-																					<xs:whiteSpace
-																						value="collapse" />
+																				<xs:restriction base="xs:decimal">
+																					<xs:minInclusive value="0.000001" />
+																					<xs:fractionDigits value="6" />
+																					<xs:whiteSpace value="collapse" />
 																				</xs:restriction>
 																			</xs:simpleType>
 																		</xs:attribute>
-																		<xs:attribute
-																			name="ImpuestoDR"
-																			type="catCFDI:c_Impuesto"
-																			use="required">
+																		<xs:attribute name="ImpuestoDR" type="catCFDI:c_Impuesto" use="required">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					requerido para
@@ -354,10 +309,7 @@
 																					relacionado.</xs:documentation>
 																			</xs:annotation>
 																		</xs:attribute>
-																		<xs:attribute
-																			name="TipoFactorDR"
-																			type="catCFDI:c_TipoFactor"
-																			use="required">
+																		<xs:attribute name="TipoFactorDR" type="catCFDI:c_TipoFactor" use="required">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					requerido para
@@ -368,9 +320,7 @@
 																					del impuesto.</xs:documentation>
 																			</xs:annotation>
 																		</xs:attribute>
-																		<xs:attribute
-																			name="TasaOCuotaDR"
-																			use="optional">
+																		<xs:attribute name="TasaOCuotaDR" use="optional">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					condicional para
@@ -388,21 +338,14 @@
 																					Tasa o Cuota.</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction
-																					base="xs:decimal">
-																					<xs:minInclusive
-																						value="0.000000" />
-																					<xs:fractionDigits
-																						value="6" />
-																					<xs:whiteSpace
-																						value="collapse" />
+																				<xs:restriction base="xs:decimal">
+																					<xs:minInclusive value="0.000000" />
+																					<xs:fractionDigits value="6" />
+																					<xs:whiteSpace value="collapse" />
 																				</xs:restriction>
 																			</xs:simpleType>
 																		</xs:attribute>
-																		<xs:attribute
-																			name="ImporteDR"
-																			type="tdCFDI:t_Importe"
-																			use="optional">
+																		<xs:attribute name="ImporteDR" type="tdCFDI:t_Importe" use="optional">
 																			<xs:annotation>
 																				<xs:documentation>Atributo
 																					condicional para
@@ -446,8 +389,7 @@
 												<xs:minLength value="16" />
 												<xs:maxLength value="36" />
 												<xs:whiteSpace value="collapse" />
-												<xs:pattern
-													value="([a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12})|([0-9]{3}-[0-9]{2}-[0-9]{9})" />
+												<xs:pattern value="([a-f0-9A-F]{8}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{4}-[a-f0-9A-F]{12})|([0-9]{3}-[0-9]{2}-[0-9]{9})" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -481,8 +423,7 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="MonedaDR" type="catCFDI:c_Moneda"
-										use="required">
+									<xs:attribute name="MonedaDR" type="catCFDI:c_Moneda" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para identificar la
 												clave de la moneda utilizada en los importes del
@@ -530,8 +471,7 @@
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
-									<xs:attribute name="ImpSaldoAnt" type="tdCFDI:t_Importe"
-										use="required">
+									<xs:attribute name="ImpSaldoAnt" type="tdCFDI:t_Importe" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar el
 												monto del saldo insoluto de la parcialidad anterior.
@@ -540,23 +480,20 @@
 												documento relacionado.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="ImpPagado" type="tdCFDI:t_Importe"
-										use="required">
+									<xs:attribute name="ImpPagado" type="tdCFDI:t_Importe" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar el
 												importe pagado para el documento relacionado.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="ImpSaldoInsoluto" type="tdCFDI:t_Importe"
-										use="required">
+									<xs:attribute name="ImpSaldoInsoluto" type="tdCFDI:t_Importe" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar la
 												diferencia entre el importe del saldo anterior y el
 												monto del pago.</xs:documentation>
 										</xs:annotation>
 									</xs:attribute>
-									<xs:attribute name="ObjetoImpDR" type="catCFDI:c_ObjetoImp"
-										use="required">
+									<xs:attribute name="ObjetoImpDR" type="catCFDI:c_ObjetoImp" use="required">
 										<xs:annotation>
 											<xs:documentation>Atributo requerido para expresar si el
 												pago del documento relacionado es objeto o no de
@@ -583,8 +520,7 @@
 											</xs:annotation>
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="RetencionP"
-														maxOccurs="unbounded">
+													<xs:element name="RetencionP" maxOccurs="unbounded">
 														<xs:annotation>
 															<xs:documentation>Nodo requerido para
 																señalar la información detallada de
@@ -592,9 +528,7 @@
 																conforme al monto del pago recibido.</xs:documentation>
 														</xs:annotation>
 														<xs:complexType>
-															<xs:attribute name="ImpuestoP"
-																type="catCFDI:c_Impuesto"
-																use="required">
+															<xs:attribute name="ImpuestoP" type="catCFDI:c_Impuesto" use="required">
 																<xs:annotation>
 																	<xs:documentation>Atributo
 																		requerido para señalar la
@@ -603,9 +537,7 @@
 																		del pago.</xs:documentation>
 																</xs:annotation>
 															</xs:attribute>
-															<xs:attribute name="ImporteP"
-																type="tdCFDI:t_Importe"
-																use="required">
+															<xs:attribute name="ImporteP" type="tdCFDI:t_Importe" use="required">
 																<xs:annotation>
 																	<xs:documentation>Atributo
 																		requerido para señalar el
@@ -630,8 +562,7 @@
 											</xs:annotation>
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="TrasladoP"
-														maxOccurs="unbounded">
+													<xs:element name="TrasladoP" maxOccurs="unbounded">
 														<xs:annotation>
 															<xs:documentation>Nodo requerido para
 																señalar la información detallada de
@@ -639,9 +570,7 @@
 																conforme al monto del pago recibido.</xs:documentation>
 														</xs:annotation>
 														<xs:complexType>
-															<xs:attribute name="BaseP"
-																type="tdCFDI:t_Importe"
-																use="required">
+															<xs:attribute name="BaseP" type="tdCFDI:t_Importe" use="required">
 																<xs:annotation>
 																	<xs:documentation>Atributo
 																		requerido para señalar la
@@ -652,9 +581,7 @@
 																		valores negativos.</xs:documentation>
 																</xs:annotation>
 															</xs:attribute>
-															<xs:attribute name="ImpuestoP"
-																type="catCFDI:c_Impuesto"
-																use="required">
+															<xs:attribute name="ImpuestoP" type="catCFDI:c_Impuesto" use="required">
 																<xs:annotation>
 																	<xs:documentation>Atributo
 																		requerido para señalar la
@@ -663,9 +590,7 @@
 																		del pago.</xs:documentation>
 																</xs:annotation>
 															</xs:attribute>
-															<xs:attribute name="TipoFactorP"
-																type="catCFDI:c_TipoFactor"
-																use="required">
+															<xs:attribute name="TipoFactorP" type="catCFDI:c_TipoFactor" use="required">
 																<xs:annotation>
 																	<xs:documentation>Atributo
 																		requerido para señalar la
@@ -674,8 +599,7 @@
 																		impuesto.</xs:documentation>
 																</xs:annotation>
 															</xs:attribute>
-															<xs:attribute name="TasaOCuotaP"
-																use="optional">
+															<xs:attribute name="TasaOCuotaP" use="optional">
 																<xs:annotation>
 																	<xs:documentation>Atributo
 																		condicional para señalar el
@@ -684,19 +608,14 @@
 																		los documentos relacionados.</xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction
-																		base="xs:decimal">
+																	<xs:restriction base="xs:decimal">
 																		<xs:fractionDigits value="6" />
-																		<xs:minInclusive
-																			value="0.000000" />
-																		<xs:whiteSpace
-																			value="collapse" />
+																		<xs:minInclusive value="0.000000" />
+																		<xs:whiteSpace value="collapse" />
 																	</xs:restriction>
 																</xs:simpleType>
 															</xs:attribute>
-															<xs:attribute name="ImporteP"
-																type="tdCFDI:t_Importe"
-																use="optional">
+															<xs:attribute name="ImporteP" type="tdCFDI:t_Importe" use="optional">
 																<xs:annotation>
 																	<xs:documentation>Atributo
 																		condicional para señalar la
@@ -793,8 +712,7 @@
 									<xs:minLength value="12" />
 									<xs:maxLength value="13" />
 									<xs:whiteSpace value="collapse" />
-									<xs:pattern
-										value="XEXX010101000|[A-Z&amp;Ñ]{3}[0-9]{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])[A-Z0-9]{2}[0-9A]" />
+									<xs:pattern value="XEXX010101000|[A-Z&amp;Ñ]{3}[0-9]{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])[A-Z0-9]{2}[0-9A]" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
@@ -857,8 +775,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="TipoCadPago" type="catPagos:c_TipoCadenaPago"
-							use="optional">
+						<xs:attribute name="TipoCadPago" type="catPagos:c_TipoCadenaPago" use="optional">
 							<xs:annotation>
 								<xs:documentation>Atributo condicional para identificar la clave del
 									tipo de cadena de pago que genera la entidad receptora del pago.

@@ -1,4 +1,5 @@
-<xs:schema xmlns:enajenaciondeacciones="http://www.sat.gob.mx/esquemas/retencionpago/1/enajenaciondeacciones" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/enajenaciondeacciones" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:enajenaciondeacciones="http://www.sat.gob.mx/esquemas/retencionpago/1/enajenaciondeacciones"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/enajenaciondeacciones" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:element name="EnajenaciondeAcciones">
         <xs:annotation>
             <xs:documentation>

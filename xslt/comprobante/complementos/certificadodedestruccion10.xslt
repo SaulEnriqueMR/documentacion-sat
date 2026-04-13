@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:destruccion="http://www.sat.gob.mx/certificadodestruccion">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+  xmlns:destruccion="http://www.sat.gob.mx/certificadodestruccion">
   <xsl:template match="destruccion:certificadodedestruccion">
-    <!--Manejador de nodos tipo certificadodedestruccion-->
+    <!--Manejador
+    de nodos tipo certificadodedestruccion-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@Version" />
     </xsl:call-template>
-	<xsl:call-template name="Requerido">
+    <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@Serie" />
     </xsl:call-template>
-	<xsl:call-template name="Requerido">
+    <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@NumFolDesVeh" />
     </xsl:call-template>
     <!--  Iniciamos el manejo de los nodos dependientes -->
@@ -57,4 +60,4 @@
       <xsl:with-param name="valor" select="./@Aduana" />
     </xsl:call-template>
   </xsl:template>
- </xsl:stylesheet>
+</xsl:stylesheet>

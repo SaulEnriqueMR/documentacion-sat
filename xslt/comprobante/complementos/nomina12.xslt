@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:nomina12="http://www.sat.gob.mx/nomina12">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+  xmlns:nomina12="http://www.sat.gob.mx/nomina12">
 
   <xsl:template match="nomina12:Nomina">
-    <!--Manejador de nodos tipo Nomina-->
+    <!--Manejador
+    de nodos tipo Nomina-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@Version" />
     </xsl:call-template>
@@ -33,33 +36,34 @@
 
     <!--  Iniciamos el manejo de los elementos hijo en la secuencia -->
     <xsl:for-each select="./nomina12:Emisor">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
     <xsl:for-each select="./nomina12:Receptor">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
     <xsl:for-each select="./nomina12:Percepciones">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
     <xsl:for-each select="./nomina12:Deducciones">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
     <xsl:for-each select="./nomina12:OtrosPagos">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
     <xsl:for-each select="./nomina12:Incapacidades">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
 
   <xsl:template match="nomina12:Emisor">
-    <!--Manejador de nodos tipo nomina12:Emisor-->
+    <!--Manejador
+    de nodos tipo nomina12:Emisor-->
     <xsl:call-template name="Opcional">
       <xsl:with-param name="valor" select="./@Curp" />
     </xsl:call-template>
@@ -72,12 +76,12 @@
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:EntidadSNCF-->
     <xsl:for-each select="./nomina12:EntidadSNCF">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
-  
-    <!--  Iniciamos el manejo de los elementos hijo en la secuencia EntidadSNCF-->
+
+  <!--  Iniciamos el manejo de los elementos hijo en la secuencia EntidadSNCF-->
   <xsl:template match="nomina12:EntidadSNCF">
     <!--  Iniciamos el manejo de los nodos dependientes -->
     <xsl:call-template name="Requerido">
@@ -90,7 +94,8 @@
   </xsl:template>
 
   <xsl:template match="nomina12:Receptor">
-    <!--Manejador de nodos tipo nomina12:Receptor-->
+    <!--Manejador
+    de nodos tipo nomina12:Receptor-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@Curp" />
     </xsl:call-template>
@@ -148,12 +153,12 @@
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:SubContratacion-->
     <xsl:for-each select="./nomina12:SubContratacion">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
-  
-    <!--  Iniciamos el manejo de los elementos hijo en la secuencia SubContratacion-->
+
+  <!--  Iniciamos el manejo de los elementos hijo en la secuencia SubContratacion-->
   <xsl:template match="nomina12:SubContratacion">
     <!--  Iniciamos el manejo de los nodos dependientes -->
     <xsl:call-template name="Requerido">
@@ -166,7 +171,8 @@
   </xsl:template>
 
   <xsl:template match="nomina12:Percepciones">
-    <!--Manejador de nodos tipo nomina12:Percepciones-->
+    <!--Manejador
+    de nodos tipo nomina12:Percepciones-->
     <xsl:call-template name="Opcional">
       <xsl:with-param name="valor" select="./@TotalSueldos" />
     </xsl:call-template>
@@ -185,23 +191,24 @@
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:Percepcion-->
     <xsl:for-each select="./nomina12:Percepcion">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:JubilacionPensionRetiro-->
     <xsl:for-each select="./nomina12:JubilacionPensionRetiro">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:SeparacionIndemnizacion-->
     <xsl:for-each select="./nomina12:SeparacionIndemnizacion">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
-   <!--  Iniciamos el manejo de los elementos hijo en la secuencia Percepcion-->
+  <!--  Iniciamos el manejo de los elementos hijo en la secuencia Percepcion-->
   <xsl:template match="nomina12:Percepcion">
-    <!--Manejador de nodos tipo nomina12:Percepcion-->
+    <!--Manejador
+    de nodos tipo nomina12:Percepcion-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@TipoPercepcion" />
     </xsl:call-template>
@@ -220,11 +227,11 @@
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:AccionesOTitulos-->
     <xsl:for-each select="./nomina12:AccionesOTitulos">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
     <!--  Iniciamos el tratamiento de los atributos de nomina12:HorasExtra-->
     <xsl:for-each select="./nomina12:HorasExtra">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
@@ -256,10 +263,11 @@
       <xsl:with-param name="valor" select="./@ImportePagado" />
     </xsl:call-template>
   </xsl:template>
-  
-   <!--  Iniciamos el manejo de los elementos hijo en la secuencia JubilacionPensionRetiro-->
+
+  <!--  Iniciamos el manejo de los elementos hijo en la secuencia JubilacionPensionRetiro-->
   <xsl:template match="nomina12:JubilacionPensionRetiro">
-    <!--Manejador de nodos tipo nomina12:JubilacionPensionRetiro-->
+    <!--Manejador
+    de nodos tipo nomina12:JubilacionPensionRetiro-->
     <xsl:call-template name="Opcional">
       <xsl:with-param name="valor" select="./@TotalUnaExhibicion" />
     </xsl:call-template>
@@ -276,10 +284,11 @@
       <xsl:with-param name="valor" select="./@IngresoNoAcumulable" />
     </xsl:call-template>
   </xsl:template>
-  
-    <!--  Iniciamos el manejo de los elementos hijo en la secuencia SeparacionIndemnizacion-->
+
+  <!--  Iniciamos el manejo de los elementos hijo en la secuencia SeparacionIndemnizacion-->
   <xsl:template match="nomina12:SeparacionIndemnizacion">
-    <!--Manejador de nodos tipo nomina12:JubilacionPensionRetiro-->
+    <!--Manejador
+    de nodos tipo nomina12:JubilacionPensionRetiro-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@TotalPagado" />
     </xsl:call-template>
@@ -296,9 +305,10 @@
       <xsl:with-param name="valor" select="./@IngresoNoAcumulable" />
     </xsl:call-template>
   </xsl:template>
-    
+
   <xsl:template match="nomina12:Deducciones">
-    <!--Manejador de nodos tipo nomina12:Deducciones-->
+    <!--Manejador
+    de nodos tipo nomina12:Deducciones-->
     <xsl:call-template name="Opcional">
       <xsl:with-param name="valor" select="./@TotalOtrasDeducciones" />
     </xsl:call-template>
@@ -308,14 +318,15 @@
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:Deduccion-->
     <xsl:for-each select="./nomina12:Deduccion">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
-  
-    <!--  Iniciamos el manejo de los elementos hijo en la secuencia Deduccion-->
+
+  <!--  Iniciamos el manejo de los elementos hijo en la secuencia Deduccion-->
   <xsl:template match="nomina12:Deduccion">
-    <!--Manejador de nodos tipo nomina12:Deduccion-->
+    <!--Manejador
+    de nodos tipo nomina12:Deduccion-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@TipoDeduccion" />
     </xsl:call-template>
@@ -330,18 +341,19 @@
     </xsl:call-template>
   </xsl:template>
 
-    <xsl:template match="nomina12:OtrosPagos">
+  <xsl:template match="nomina12:OtrosPagos">
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:OtroPago-->
     <xsl:for-each select="./nomina12:OtroPago">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
-  
+
   <!--  Iniciamos el manejo de los elementos hijo en la secuencia OtroPago-->
   <xsl:template match="nomina12:OtroPago">
-    <!--Manejador de nodos tipo nomina12:OtroPago-->
+    <!--Manejador
+    de nodos tipo nomina12:OtroPago-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@TipoOtroPago" />
     </xsl:call-template>
@@ -357,18 +369,19 @@
 
     <!--  Iniciamos el tratamiento de los atributos de nomina12:SubsidioAlEmpleo-->
     <xsl:for-each select="./nomina12:SubsidioAlEmpleo">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
     <!--  Iniciamos el tratamiento de los atributos de nomina12:CompensacionSaldosAFavor-->
     <xsl:for-each select="./nomina12:CompensacionSaldosAFavor">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
 
   </xsl:template>
 
   <!--  Iniciamos el manejo de los elementos hijo en la secuencia SubsidioAlEmpleo-->
   <xsl:template match="nomina12:SubsidioAlEmpleo">
-    <!--Manejador de nodos tipo nomina12:SubsidioAlEmpleo-->
+    <!--Manejador
+    de nodos tipo nomina12:SubsidioAlEmpleo-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@SubsidioCausado" />
     </xsl:call-template>
@@ -376,7 +389,8 @@
 
   <!--  Iniciamos el manejo de los elementos hijo en la secuencia CompensacionSaldosAFavor-->
   <xsl:template match="nomina12:CompensacionSaldosAFavor">
-    <!--Manejador de nodos tipo nomina12:CompensacionSaldosAFavor-->
+    <!--Manejador
+    de nodos tipo nomina12:CompensacionSaldosAFavor-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@SaldoAFavor" />
     </xsl:call-template>
@@ -391,13 +405,14 @@
   <xsl:template match="nomina12:Incapacidades">
     <!--  Iniciamos el tratamiento de los atributos de nomina12:Incapacidades-->
     <xsl:for-each select="./nomina12:Incapacidad">
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates select="." />
     </xsl:for-each>
   </xsl:template>
 
   <!--  Iniciamos el manejo de los elementos hijo en la secuencia Incapacidad-->
   <xsl:template match="nomina12:Incapacidad">
-    <!--Manejador de nodos tipo nomina12:Incapacidad-->
+    <!--Manejador
+    de nodos tipo nomina12:Incapacidad-->
     <xsl:call-template name="Requerido">
       <xsl:with-param name="valor" select="./@DiasIncapacidad" />
     </xsl:call-template>

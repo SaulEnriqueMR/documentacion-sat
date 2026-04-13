@@ -1,7 +1,5 @@
 <xs:schema xmlns:planesderetiro="http://www.sat.gob.mx/esquemas/retencionpago/1/planesderetiro"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/planesderetiro"
-    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sat.gob.mx/esquemas/retencionpago/1/planesderetiro" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <xs:element name="Planesderetiro">
         <xs:annotation>
             <xs:documentation> Complemento para expresar la información sobre los planes personales
@@ -27,16 +25,14 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
-            <xs:attribute name="MontTotAportAnioInmAnterior" type="planesderetiro:t_Importe"
-                use="optional">
+            <xs:attribute name="MontTotAportAnioInmAnterior" type="planesderetiro:t_Importe" use="optional">
                 <xs:annotation>
                     <xs:documentation> Atributo opcional que expresa el monto total de las
                         aportaciones actualizadas en el año inmediato anterior de los planes
                         personales de retiro </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="MontIntRealesDevengAniooInmAnt" type="planesderetiro:t_Importe"
-                use="required">
+            <xs:attribute name="MontIntRealesDevengAniooInmAnt" type="planesderetiro:t_Importe" use="required">
                 <xs:annotation>
                     <xs:documentation> Atributo requerido para expresar el monto de los intereses
                         reales devengados o percibidos durante el año inmediato anterior de los
@@ -57,22 +53,19 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
-            <xs:attribute name="MontTotRetiradoAnioInmAntPer" type="planesderetiro:t_Importe"
-                use="optional">
+            <xs:attribute name="MontTotRetiradoAnioInmAntPer" type="planesderetiro:t_Importe" use="optional">
                 <xs:annotation>
                     <xs:documentation> Atributo opcional que expresa el monto total del retiro
                         realizado antes de cumplir con los requisitos de permanencia </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="MontTotExentRetiradoAnioInmAnt" type="planesderetiro:t_Importe"
-                use="optional">
+            <xs:attribute name="MontTotExentRetiradoAnioInmAnt" type="planesderetiro:t_Importe" use="optional">
                 <xs:annotation>
                     <xs:documentation> Atributo opcional que expresa el monto total exento del
                         retiro realizado en el ejercicio inmediato anterior </xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="MontTotExedenteAnioInmAnt" type="planesderetiro:t_Importe"
-                use="optional">
+            <xs:attribute name="MontTotExedenteAnioInmAnt" type="planesderetiro:t_Importe" use="optional">
                 <xs:annotation>
                     <xs:documentation> Atributo opcional que expresa el monto total excedente del
                         monto exento del retiro realizado en el ejercicio inmediato anterior </xs:documentation>
@@ -90,8 +83,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>
-            <xs:attribute name="MontTotRetiradoAnioInmAnt" type="planesderetiro:t_Importe"
-                use="optional">
+            <xs:attribute name="MontTotRetiradoAnioInmAnt" type="planesderetiro:t_Importe" use="optional">
                 <xs:annotation>
                     <xs:documentation> Atributo opcional que expresa el monto total del retiro
                         realizado en el ejercicio inmediato anterior </xs:documentation>
