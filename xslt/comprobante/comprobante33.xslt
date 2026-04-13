@@ -54,6 +54,7 @@
   <xsl:include href="complementoconcepto/terceros11.xslt" />
   <xsl:include href="complementoconcepto/insteducativas10.xslt" />
   <xsl:include href="complementoconcepto/ventavehiculos11.xslt" />
+  <xsl:include href="complementoconcepto/hidrocarburospetroliferos10.xslt" />
   <xsl:include href="complementos/pfintegrantescoordinado10.xslt" />
   <xsl:include href="complementos/turistapasajeroextranjero10.xslt" />
   <xsl:include href="complementos/leyendasfiscales10.xslt" />
